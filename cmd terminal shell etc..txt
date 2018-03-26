@@ -1,0 +1,181 @@
+﻿Tab will auto complete the last command
+
+
+E tab, tab will list all commands starting with e, space to scroll down (paginate)
+
+
+Man command will show manual for that command
+
+
+Everything in square brackets is optional
+
+
+… = 1 or more
+
+
+-n = don’t go to a new line
+
+
+Pwd = print working directory “where am I?” shows context 
+
+
+~ represents home directory /home/tereza ; cd ~ or just cd = take me home
+
+
+Whoami returns your username
+
+
+Mkdir make directory
+
+
+Ls lists your folders, files; ls -lR command will list everything w/ detail including subdirectories
+
+
+Mkdir -p code/1/2/3 make 3 directories nested within each other
+
+
+Cd .. go up one
+
+
+Rmdir 3 = remove directory 3 (remove means delete for real)
+
+
+Rmdir -p 1/2/ (will not remove unless it is empty)
+
+
+Hidden files: ls -a shows all, including hidden files e.g., DS_store stores data about the folder, like tags/colors, the fact that it’s open, etc
+
+
+Touch command = creates an empty file; touch some_code creates it; rm some_code removes it completely
+ 
+Ls -l lists all details about the files; shows modified time, not created time
+
+
+Ls -a -l is the same as Ls -al
+
+
+Cd - = equivalent to the back button
+
+
+Cd . = tells you where you are ; . represents the current dir
+
+
+Cp command copies e.g., cp code code.backup
+E.g., cp biopic/ray.txt biopic/notorious.txt historical/ ==copies 2 .txt files in the biopic directory, and places them in the historical directory
+Source file is first argument; destination directory is second argument
+Cp * satire/ = will copy everything and place into satire directory
+
+
+Cp -r a a.copy copies a whole directory
+
+
+Functionality changes depending on where you put the /
+
+
+Ls -R shows your files as a tree
+Sudo apt-get install tree
+
+
+Now typing tree or tree . shows all your files almost GUIlike
+
+
+Mv code2 codenew renames a file; mv file1 file2==when the first and second arguments are files, the mv command will rename that first file to the second file name
+        -when the first argument is a file, and second argument is a dir, mv will move that file into the directory
+
+
+Mv b bnew can rename a directory, slash doesn’t matter
+
+Rm -r 1 will delete an entire directory tree without worrying about whether it’s empty (use rmdir before rm -r!)
+        -r is recursive: will delete a directory and all of its children
+
+
+Rm -i “interactive” delete ; will ask you if you’re sure you want to delete
+
+Bash is only useful one line at a time
+
+
+Standard out vs alternative outs --to printer, speaker, etc
+
+
+Echo hello world > helloworld.txt “>” is the glue between the two machines ...will delete anything in that txt file and replace with hello world
+
+
+Cat = concatenate files
+
+
+Echo “hello world” >> helloworld.txt --now it will append hello world to whatever text was in there to begin with
+
+
+Echo produces output; mkdir mv etc. do not produce output
+
+
+Find . >> helloworld.txt will produce results in that txt
+Cat does not paginate; use less helloworld.txt to paginate and move through it at your own speed with spacebar, q to quit, g to jump to top, G to go to bottom
+
+
+Useful for manual pages. To find an instance of something, type /-t to find instances of -t in the manual
+
+
+Control+C =STOP! Use it to stop an infinite loop
+
+
+Head command displays the first 10 lines ; tail for last 10 lines
+
+
+| syntax (pipe) program to program ; file to program: use cat or <<
+
+
+Ls + name of file confirms if a particular file exists ; e.g., code1 code3 --you can pass multiple filenames ; ls code* will list anything starting with “code”
+
+
+*= wildcard character, but sometimes multiplication
+
+
+Find command -- find . will list every file, every folder
+
+
+Grep searcher that will filter data ; find . | grep code = will give you every file, every folder containing “code”
+
+
+Grep ‘hello’ hello_world.txt you need 2 parameters: what text you’re looking for, and what files to search
+
+
+Grep -r = recursive find; will search inside of the file, not just the title --doesn't tell you context -n tells you line number
+
+
+Grep -R outputs filenames and lines with matched results
+
+
+$ refers to a variable ; setting a variable only applies to one session of terminal that you’re running
+
+
+Export HELLO = allows value of that variable to be accessed by any program running on your computer ; unset HELLO to ‘unset’ that variable
+
+
+Env will show all public variables
+
+
+Irb switches to ruby
+        ENV will show all variables that the shell is sharing with ruby
+
+
+Ctrl + D ends session and logs you out
+Echo puts \”Hello\” | ruby (you can just pipe commands from terminal to ruby)
+
+
+Terminal = app on your computer (same as console or shell, shellscript, command line); iTerm2 free app that imitates Terminal but more interactive ; terminal (lowercase) is the concept of the terminal experience, based on tty (teletype)
+
+
+Bash = programming language (Bourne-Again SHell) ; original one was just called shell (sh). If you’re not sure what mystery shell you’re usin, just type bash
+
+
+Sed = stream editor; use to modify content in files
+        -s = substitute
+
+
+Uniq = filters duplicate, adjacent lines of text
+
+
+Atom:
+Open index.html on Mac
+Xdg-open index.html (Tab+i) on Linux
